@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bike EMI Calculator | Jogniya Motors</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <h2>Jogniya Motors</h2>
+            <p>Hero Bikes</p>
+        </div>
+
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./bikes.html">New Bikes</a>
+            <a href="used-bikes.html">Used Bikes</a>
+            <a href="parts.html">Spare Parts</a>
+            <a href="services.html">Services</a>
+            <a href="./emi.html" class="active">EMI Calculator</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <h1>Bike EMI Calculator</h1>
+
+        <p>
+            Calculate your estimated monthly EMI for your new or used bike.
+        </p>
+    </section>
+
+<button
+    type="button"
+    class="emi-button"
+    onclick="calculateEMI()"
+>
+    Calculate EMI
+</button>
+    <!-- EMI CALCULATOR -->
+    <section class="emi-section">
+
+        <div class="emi-container">
+
+            <!-- CALCULATOR -->
+            <div class="emi-calculator">
+
+                <h2>Calculate Your EMI</h2>
+
+                <div class="form-group">
+                    <label for="bikePrice">
+                        Bike Price (₹)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="bikePrice"
+                        placeholder="Example: 78000"
+                        min="0"
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="downPayment">
+                        Down Payment (₹)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="downPayment"
+                        placeholder="Example: 20000"
+                        min="0"
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="interestRate">
+                        Interest Rate (% per year)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="interestRate"
+                        placeholder="Example: 9.5"
+                        value="9.5"
+                        min="0"
+                        step="0.1"
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="loanTenure">
+                        Loan Tenure (Years)
+                    </label>
+
+                    <select id="loanTenure">
+
+                        <option value="1">
+                            1 Year
+                        </option>
+
+                        <option value="2" selected>
+                            2 Years
+                        </option>
+
+                        <option value="3">
+                            3 Years
+                        </option>
+
+                        <option value="4">
+                            4 Years
+                        </option>
+
+                        <option value="5">
+                            5 Years
+                        </option>
+
+                    </select>
+                </div>
+
+
+                <button
+                    type="button"
+                    class="emi-button"
+                    onclick="calculateEMI()"
+                >
+                    Calculate EMI
+                </button>
+
+            </div>
+
+
+            <!-- RESULT -->
+            <div class="emi-result">
+
+                <h2>EMI Details</h2>
+
+                <div class="emi-result-box">
+
+                    <p>Monthly EMI</p>
+
+                    <h3 id="monthlyEMI">
+                        ₹0
+                    </h3>
+
+                </div>
+
+
+                <div class="emi-result-row">
+
+                    <div>
+                        <p>Loan Amount</p>
+
+                        <strong id="loanAmount">
+                            ₹0
+                        </strong>
+                    </div>
+
+
+                    <div>
+                        <p>Total Interest</p>
+
+                        <strong id="totalInterest">
+                            ₹0
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="emi-total">
+
+                    <p>Total Amount Payable</p>
+
+                    <h3 id="totalAmount">
+                        ₹0
+                    </h3>
+
+                </div>
+
+
+                <p class="emi-note">
+                    *This is an estimated EMI. Actual EMI may vary
+                    depending on the bank, interest rate and loan terms.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT CTA -->
+    <section class="contact-cta">
+
+        <h2>Want to Buy a Bike on EMI?</h2>
+
+        <p>
+            Contact Jogniya Motors and get information about
+            available finance options.
+        </p>
+
+        <a href="contact.html" class="cta-button">
+            Contact Us
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>Jogniya Motors</h3>
+
+        <p>
+            Your Trusted Hero Bike Dealer
+        </p>
+
+        <p>
+            © 2026 Jogniya Motors. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- WHATSAPP -->
+    <a href="#" class="whatsapp-float" id="floatingWhatsApp">
+        💬
+    </a>
+
+
+    <script src="./frontend.js"></script>
+
+</body>
+</html>

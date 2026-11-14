@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Jogniya Motors</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            <h2>Jogniya Motors</h2>
+        </div>
+
+        <nav class="navbar">
+            <a href="./index.html">Home</a>
+            <a href="./bikes.html">New Bikes</a>
+            <a href="./usedbikes.html">Used Bikes</a>
+            <a href="./parts.html">Parts & Accessories</a>
+            <a href="./services.html">Services</a>
+            <a href="./emi.html">EMI Calculator</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="page-header">
+
+        <h1>Contact Jogniya Motors</h1>
+
+        <p>
+            Have a question about a bike, service, spare parts or EMI?
+            Get in touch with us today.
+        </p>
+
+    </section>
+
+
+    <!-- ================= CONTACT SECTION ================= -->
+
+    <section class="contact-section">
+
+        <div class="contact-container">
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="contact-info">
+
+                <h2>Visit Our Showroom</h2>
+
+                <p>
+                    Visit Jogniya Motors for new Hero bikes, second-hand bikes,
+                    spare parts, accessories and bike services.
+                </p>
+
+
+                <div class="contact-item">
+
+                    <h3>📍 Address</h3>
+
+                    <p>
+                        Jogniya Motors<br>
+                        Shahpura–Banera Road<br>
+                        Tehsil Banera, District Bhilwara<br>
+                        Rajasthan – 311401
+                    </p>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <h3>📞 Phone</h3>
+
+                    <p>
+                        <a href="tel:9829748214">
+                            9829748214
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="tel:8949921172">
+                            8949921172
+                        </a>
+                    </p>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <h3>💬 WhatsApp</h3>
+
+                    <p>
+                        Chat with us directly on WhatsApp for bike enquiries
+                        and other information.
+                    </p>
+
+                    <button
+                        class="contact-whatsapp-btn"
+                        onclick="openWhatsApp('Hello Jogniya Motors, I want to enquire about your bikes and services.')">
+
+                        Chat on WhatsApp
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ENQUIRY FORM -->
+
+            <div class="contact-form">
+
+                <h2>Send an Enquiry</h2>
+
+                <p>
+                    Fill in your details and we will contact you.
+                </p>
+
+
+                <form id="enquiryForm">
+
+                    <div class="form-group">
+
+                        <label for="customerName">
+                            Your Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customerName"
+                            placeholder="Enter your name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="customerPhone">
+                            Mobile Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="customerPhone"
+                            placeholder="Enter your mobile number"
+                            maxlength="10"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="enquiryType">
+                            Enquiry Type
+                        </label>
+
+                        <select id="enquiryType" required>
+
+                            <option value="">
+                                Select enquiry type
+                            </option>
+
+                            <option value="New Bike">
+                                New Bike
+                            </option>
+
+                            <option value="Used Bike">
+                                Used Bike
+                            </option>
+
+                            <option value="Spare Parts">
+                                Spare Parts
+                            </option>
+
+                            <option value="Accessories">
+                                Accessories
+                            </option>
+
+                            <option value="Bike Service">
+                                Bike Service
+                            </option>
+
+                            <option value="EMI">
+                                EMI / Finance
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="customerMessage">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="customerMessage"
+                            rows="5"
+                            placeholder="Tell us what you are looking for..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="enquiry-submit-btn" id="enquirySubmitBtn">
+    Submit Enquiry
+</button>
+
+<div id="enquiryFormMessage" role="status" aria-live="polite"></div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GOOGLE MAP ================= -->
+
+    <section class="map-section">
+
+        <div class="section-title">
+
+            <h2>Find Us on Google Maps</h2>
+
+            <p>
+                Visit our showroom at Shahpura–Banera Road, Banera.
+            </p>
+
+        </div>
+
+
+        <div class="map-container">
+
+            <iframe
+                src="https://www.google.com/maps?q=Banera%2C%20Bhilwara%2C%20Rajasthan&output=embed"
+                width="100%"
+                height="400"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="contact-cta">
+
+        <h2>Looking for a Bike?</h2>
+
+        <p>
+            Explore our new and second-hand bikes or contact us directly.
+        </p>
+
+        <a href="./bikes.html" class="cta-btn">
+            Explore Bikes
+        </a>
+
+        <button
+            class="cta-btn whatsapp-cta"
+            onclick="openWhatsApp('Hello Jogniya Motors, I want to know about available bikes.')">
+
+            WhatsApp Us
+
+        </button>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <h3>Jogniya Motors</h3>
+
+        <p>
+            New Bikes | Used Bikes | Spare Parts | Accessories | Services
+        </p>
+
+        <p>
+            © 2026 Jogniya Motors. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= FLOATING WHATSAPP ================= -->
+
+    <button
+        id="floatingWhatsApp"
+        class="floating-whatsapp">
+
+        💬
+
+    </button>
+
+
+    <script src="./frontend.js"></script>
+
+</body>
+</html>

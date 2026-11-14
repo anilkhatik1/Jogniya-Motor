@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Used Bikes | Jogniya Motors</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        <span>JOGNIYA</span>
+        <small>MOTORS</small>
+    </div>
+
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./bikes.html">New Bikes</a>
+        <a href="./usedbikes.html" class="active">Used Bikes</a>
+        <a href="./parts.html">Spare Parts</a>
+        <a href="./services.html">Services</a>
+        <a href="./emi.html">EMI Calculator</a>
+        <a href="./contact.html">Contact</a>
+    </nav>
+
+    <a href="#" class="nav-whatsapp">WhatsApp</a>
+
+</header>
+
+<section class="page-header">
+
+    <p>JOGNIYA MOTORS</p>
+
+    <h1>Used & Second-Hand Bikes</h1>
+
+    <span>
+        Quality used bikes at affordable prices.
+    </span>
+
+</section>
+
+<section class="used-bike-section">
+
+    <div class="used-filters">
+
+        <input
+            type="text"
+            id="usedBikeSearch"
+            placeholder="Search used bike..."
+        >
+
+        <select id="usedPriceFilter">
+
+            <option value="all">All Prices</option>
+
+            <option value="under50000">Under ₹50,000</option>
+
+            <option value="50000to80000">
+                ₹50,000 - ₹80,000
+            </option>
+
+            <option value="80000to100000">
+                ₹80,000 - ₹1,00,000
+            </option>
+
+            <option value="above100000">
+                Above ₹1,00,000
+            </option>
+
+        </select>
+
+    </div>
+
+    <div class="used-bike-grid" id="usedBikeGrid">
+
+        <p class="inventory-message">
+            Loading used bikes...
+        </p>
+
+    </div>
+
+    <div id="noUsedBikeResults"
+         class="no-results"
+         style="display:none;">
+
+        <h3>No used bikes found</h3>
+
+        <p>Try another search or price range.</p>
+
+    </div>
+
+    <div id="usedBikeError"
+         class="inventory-error"
+         style="display:none;">
+
+        Unable to load used bikes. Please try again later.
+
+    </div>
+
+</section>
+
+<section class="contact-cta">
+
+    <h2>Looking for a Used Bike?</h2>
+
+    <p>
+        Visit Jogniya Motors and check our
+        available second-hand bikes.
+    </p>
+
+    <a href="./contact.html" class="cta-button">
+        Contact Us
+    </a>
+
+</section>
+
+<footer>
+
+    <div class="footer-logo">JOGNIYA MOTORS</div>
+
+    <p>Your Trusted Motorcycle Dealer</p>
+
+    <p>© 2026 Jogniya Motors. All Rights Reserved.</p>
+
+</footer>
+
+<a href="#" class="whatsapp-float">💬</a>
+
+<script src="./frontend.js"></script>
+
+</body>
+</html>

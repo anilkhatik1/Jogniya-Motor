@@ -1,0 +1,1778 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #111111;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* HEADER */
+
+.header {
+    height: 80px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eeeeee;
+    background: white;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.logo span {
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.logo small {
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    opacity: 0.6;
+}
+
+.nav-whatsapp {
+    padding: 10px 18px;
+    border-radius: 6px;
+    background: #111111;
+    color: white;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+    background:
+        linear-gradient(
+            90deg,
+            #eeeeee,
+            #ffffff
+        );
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-small {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    text-decoration: underline;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555555;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.primary {
+    background: #111111;
+    color: white;
+}
+
+.secondary {
+    border: 1px solid #111111;
+}
+
+
+/* SECTIONS */
+
+section {
+    padding: 90px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading p {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    margin-top: 10px;
+}
+
+
+/* CATEGORY CARDS */
+
+.category-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(4, 1fr);
+    gap: 20px;
+}
+
+.category-card {
+    padding: 30px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.category-card h3 {
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.category-card a {
+    font-weight: bold;
+}
+
+
+/* BIKES */
+
+.featured {
+    background: #f6f6f6;
+}
+
+.bike-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+    gap: 25px;
+}
+
+.bike-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bike-image {
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dddddd;
+    color: #666666;
+}
+
+.bike-info {
+    padding: 25px;
+}
+
+.bike-info p {
+    color: #666666;
+    margin: 8px 0;
+}
+
+.bike-info h4 {
+    margin: 15px 0;
+}
+
+
+/* EMI */
+
+.emi-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111111;
+    color: white;
+}
+
+.emi-banner p {
+    color: #cccccc;
+}
+
+
+/* CONTACT */
+
+.contact-cta {
+    text-align: center;
+}
+
+.contact-cta h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.contact-cta p {
+    margin-bottom: 25px;
+    color: #666666;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 60px 8%;
+    background: #111111;
+    color: white;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: #cccccc;
+}
+
+.copyright {
+    color: #888888;
+    font-size: 13px;
+}
+
+
+/* WHATSAPP */
+
+.whatsapp-float {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111111;
+    color: white;
+    font-size: 25px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    nav {
+        display: none;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bike-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .emi-banner {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+    .hero {
+        padding: 60px 5%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* PAGE HEADER */
+
+.page-header {
+    text-align: center;
+    background: #f5f5f5;
+    padding: 80px 20px;
+}
+
+.page-header p {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.page-header h1 {
+    font-size: 50px;
+    margin: 10px 0;
+}
+
+.page-header span {
+    color: #666;
+}
+
+
+/* BIKE SECTION */
+
+.bike-section {
+    padding-top: 70px;
+}
+
+.bike-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 35px;
+}
+
+.bike-top h2 {
+    font-size: 35px;
+}
+
+.section-label {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+/* FILTERS */
+
+.filters {
+    display: grid;
+    grid-template-columns:
+        2fr 1fr 1fr auto;
+
+    gap: 15px;
+
+    padding: 25px;
+
+    margin-bottom: 45px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 10px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.filter-group label {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.filter-group input,
+.filter-group select {
+    height: 45px;
+    padding: 0 12px;
+
+    border: 1px solid #cccccc;
+
+    border-radius: 5px;
+
+    background: white;
+}
+
+.clear-filter {
+    align-self: end;
+
+    height: 45px;
+
+    padding: 0 20px;
+
+    border: 1px solid #111;
+
+    background: white;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+/* BIKE CARD */
+
+.bike-brand {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.bike-button {
+    display: inline-block;
+
+    margin-top: 5px;
+
+    padding: 10px 18px;
+
+    border: 1px solid #111;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+.bike-button:hover {
+    background: #111;
+    color: white;
+}
+
+
+/* NO RESULTS */
+
+.no-results {
+    display: none;
+
+    text-align: center;
+
+    padding: 70px 20px;
+}
+
+.no-results p {
+    color: #666;
+}
+
+
+/* MOBILE FILTERS */
+
+@media (max-width: 900px) {
+
+    .filters {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .clear-filter {
+        width: 100%;
+    }
+
+    .page-header h1 {
+        font-size: 40px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .filters {
+        grid-template-columns: 1fr;
+    }
+
+    .bike-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+/* BIKE DETAILS */
+
+.bike-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: start;
+    padding: 80px 8%;
+}
+
+.details-image {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f3f3;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.details-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+}
+
+.details-info {
+    padding-top: 20px;
+}
+
+.details-info h1 {
+    font-size: 45px;
+    line-height: 1.1;
+    margin: 10px 0 20px;
+}
+
+.details-description {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.details-info h2 {
+    font-size: 30px;
+}
+
+.price-note {
+    font-size: 12px;
+    color: #777;
+    margin-top: 5px;
+}
+
+
+/* SPECIFICATIONS */
+
+.specifications {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    margin: 30px 0;
+    border: 1px solid #ddd;
+}
+
+.specifications div {
+    padding: 18px;
+    background: #fafafa;
+}
+
+.specifications strong,
+.specifications span {
+    display: block;
+}
+
+.specifications strong {
+    font-size: 13px;
+}
+
+.specifications span {
+    margin-top: 5px;
+    color: #666;
+}
+
+
+/* ACTIONS */
+
+.details-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+
+/* QUICK ENQUIRY */
+
+.quick-enquiry {
+    margin-top: 40px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.quick-enquiry p {
+    color: #666;
+    margin: 5px 0 20px;
+}
+
+.quick-enquiry form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.quick-enquiry input {
+    height: 45px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .bike-details {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 50px 5%;
+    }
+
+    .details-image {
+        min-height: 350px;
+    }
+
+    .details-image img {
+        height: 350px;
+    }
+
+    .details-info h1 {
+        font-size: 35px;
+    }
+}
+/* ============================= */
+/* EMI CALCULATOR */
+/* ============================= */
+
+.emi-section {
+    padding: 60px 20px;
+    background: #f5f5f5;
+}
+
+.emi-container {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+
+/* Calculator */
+
+.emi-calculator {
+    background: white;
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.emi-calculator h2 {
+    margin-bottom: 25px;
+}
+
+
+/* Form */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+
+    border-color: #333;
+}
+
+
+/* Button */
+
+.emi-button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #111;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.emi-button:hover {
+    background: #333;
+}
+
+
+/* Result */
+
+.emi-result {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.emi-result h2 {
+    margin-bottom: 25px;
+}
+
+
+/* Monthly EMI */
+
+.emi-result-box {
+    text-align: center;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    background: #f2f2f2;
+
+    margin-bottom: 20px;
+}
+
+.emi-result-box p {
+    margin-bottom: 8px;
+
+    color: #555;
+}
+
+.emi-result-box h3 {
+    font-size: 32px;
+
+    margin: 0;
+}
+
+
+/* Result Row */
+
+.emi-result-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.emi-result-row > div {
+    padding: 18px;
+
+    background: #f7f7f7;
+
+    border-radius: 8px;
+}
+
+.emi-result-row p {
+    margin: 0 0 8px;
+
+    color: #666;
+}
+
+.emi-result-row strong {
+    font-size: 18px;
+}
+
+
+/* Total */
+
+.emi-total {
+    padding: 20px;
+
+    border-radius: 8px;
+
+    background: #f2f2f2;
+
+    text-align: center;
+}
+
+.emi-total p {
+    margin-bottom: 8px;
+}
+
+.emi-total h3 {
+    margin: 0;
+
+    font-size: 24px;
+}
+
+
+/* Note */
+
+.emi-note {
+    margin-top: 20px;
+
+    font-size: 13px;
+
+    color: #666;
+
+    line-height: 1.5;
+}
+
+
+/* EMI mobile */
+
+@media (max-width: 768px) {
+
+    .emi-container {
+        grid-template-columns: 1fr;
+    }
+
+    .emi-result-box h3 {
+        font-size: 27px;
+    }
+
+    .emi-result-row {
+        grid-template-columns: 1fr;
+    }
+}
+/* ============================= */
+/* USED BIKES */
+/* ============================= */
+
+.used-bike-section {
+    padding: 50px 20px;
+    background: #f5f5f5;
+}
+
+
+.used-filters {
+    max-width: 1100px;
+    margin: 0 auto 35px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    gap: 15px;
+}
+
+
+.used-filters input,
+.used-filters select {
+    width: 100%;
+    padding: 14px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    box-sizing: border-box;
+}
+
+
+.used-bike-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.used-bike-card {
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+
+.used-bike-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.used-bike-image {
+    width: 100%;
+    height: 210px;
+
+    background: #eee;
+
+    overflow: hidden;
+}
+
+
+.used-bike-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.used-bike-info {
+    padding: 20px;
+}
+
+
+.used-bike-info h3 {
+    margin: 0 0 8px;
+
+    font-size: 19px;
+}
+
+
+.used-bike-info h4 {
+    margin: 0 0 15px;
+
+    font-size: 21px;
+}
+
+
+.used-bike-details {
+    margin-bottom: 18px;
+}
+
+
+.used-bike-details p {
+    margin: 7px 0;
+
+    font-size: 14px;
+
+    color: #555;
+}
+
+
+.used-bike-button {
+    display: block;
+
+    text-align: center;
+
+    padding: 12px;
+
+    background: #111;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 7px;
+
+    font-weight: 600;
+}
+
+
+.used-bike-button:hover {
+    background: #333;
+}
+
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .used-bike-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .used-filters {
+        grid-template-columns: 1fr;
+    }
+
+
+    .used-bike-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .used-bike-image {
+        height: 230px;
+    }
+
+}
+
+/* ============================= */
+/* SPARE PARTS */
+/* ============================= */
+
+.parts-section {
+    padding: 50px 20px;
+    background: #f5f5f5;
+}
+
+
+.parts-filters {
+    max-width: 1100px;
+    margin: 0 auto 35px;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+.parts-filters input,
+.parts-filters select {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    box-sizing: border-box;
+}
+
+
+.parts-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.part-card {
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+
+.part-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.part-image {
+    width: 100%;
+
+    height: 220px;
+
+    background: #eee;
+
+    overflow: hidden;
+}
+
+
+.part-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.part-info {
+    padding: 20px;
+}
+
+
+.part-category {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    background: #eee;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    margin-bottom: 10px;
+}
+
+
+.part-info h3 {
+    margin: 5px 0 8px;
+
+    font-size: 19px;
+}
+
+
+.part-info h4 {
+    margin: 0 0 12px;
+
+    font-size: 21px;
+}
+
+
+.part-info p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-bottom: 18px;
+}
+
+
+.part-button {
+    display: block;
+
+    text-align: center;
+
+    padding: 12px;
+
+    background: #111;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 7px;
+
+    font-weight: 600;
+}
+
+
+.part-button:hover {
+    background: #333;
+}
+
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .parts-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .parts-filters {
+        grid-template-columns: 1fr;
+    }
+
+
+    .parts-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .part-image {
+        height: 230px;
+    }
+
+}
+
+/* ======================================================
+   SERVICES PAGE
+   ====================================================== */
+
+.services-section {
+    padding: 60px 8%;
+    background: #f7f7f7;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.service-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.service-card button {
+    border: none;
+    background: #111;
+    color: #fff;
+    padding: 11px 22px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.service-card button:hover {
+    background: #333;
+}
+
+
+/* ======================================================
+   SERVICES MOBILE RESPONSIVE
+   ====================================================== */
+
+@media (max-width: 900px) {
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .services-section {
+        padding: 40px 5%;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 25px 20px;
+    }
+
+}
+
+/* ======================================================
+   CONTACT PAGE
+   ====================================================== */
+
+.contact-section {
+    padding: 60px 8%;
+    background: #f7f7f7;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+
+/* CONTACT INFORMATION */
+
+.contact-info,
+.contact-form {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info h2,
+.contact-form h2 {
+    margin-bottom: 12px;
+    font-size: 28px;
+}
+
+.contact-info > p,
+.contact-form > p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    margin-bottom: 25px;
+}
+
+.contact-item h3 {
+    margin-bottom: 8px;
+}
+
+.contact-item p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.contact-item a {
+    color: #111;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/* WHATSAPP BUTTON */
+
+.contact-whatsapp-btn {
+    margin-top: 10px;
+
+    background: #25D366;
+    color: white;
+
+    border: none;
+    padding: 12px 22px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.contact-whatsapp-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* FORM */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ddd;
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #111;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* SUBMIT BUTTON */
+
+.enquiry-submit-btn {
+    width: 100%;
+
+    background: #111;
+    color: #fff;
+
+    border: none;
+
+    padding: 14px;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.enquiry-submit-btn:hover {
+    background: #333;
+}
+
+
+/* ======================================================
+   GOOGLE MAP
+   ====================================================== */
+
+.map-section {
+    padding: 60px 8%;
+    background: #ffffff;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #666;
+}
+
+.map-container {
+    max-width: 1200px;
+    margin: auto;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ======================================================
+   CONTACT CTA
+   ====================================================== */
+
+.contact-cta {
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background: #f7f7f7;
+}
+
+.contact-cta h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.contact-cta p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.cta-btn {
+    display: inline-block;
+
+    background: #111;
+    color: #fff;
+
+    text-decoration: none;
+
+    border: none;
+
+    padding: 12px 24px;
+
+    border-radius: 6px;
+
+    margin: 5px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+.cta-btn:hover {
+    background: #333;
+}
+
+.whatsapp-cta {
+    background: #25D366;
+}
+
+.whatsapp-cta:hover {
+    background: #1da851;
+}
+
+
+/* ======================================================
+   MOBILE RESPONSIVE
+   ====================================================== */
+
+@media (max-width: 800px) {
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-section {
+        padding: 40px 5%;
+    }
+
+    .map-section {
+        padding: 40px 5%;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 25px;
+    }
+
+    .section-title h2 {
+        font-size: 25px;
+    }
+}
+/* =========================================
+   DATABASE INVENTORY CARDS
+========================================= */
+
+.bike-image img,
+.used-bike-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.bike-image,
+.used-bike-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eeeeee;
+    color: #666666;
+    font-size: 14px;
+}
+
+.inventory-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px 15px;
+    color: #666666;
+}
+
+.inventory-error {
+    text-align: center;
+    padding: 25px;
+    color: #d93025;
+    font-weight: 600;
+}
+
+.inventory-stock {
+    color: #188038 !important;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.used-bike-brand {
+    color: #666666;
+    font-size: 14px;
+}
+
+.bike-button,
+.used-bike-button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.bike-button {
+    background: #111111;
+    color: #ffffff;
+}
+
+.bike-button:hover {
+    background: #333333;
+}
+
+.used-bike-button {
+    border: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .bike-image {
+        height: 230px;
+    }
+}
+/* MYSQL SPARE PARTS */
+
+.part-image {
+    overflow: hidden;
+}
+
+.part-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.part-stock {
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.in-stock {
+    color: green;
+}
+
+.out-of-stock {
+    color: #d62828;
+}
+
+.part-no-image {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2;
+    color: #777;
+}
+
+.loading-message {
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+}

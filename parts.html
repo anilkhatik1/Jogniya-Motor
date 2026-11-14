@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Spare Parts & Accessories | Jogniya Motors</title>
+
+    <link rel="stylesheet"
+        href="./style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+
+        <h2>Jogniya Motors</h2>
+
+        <p>Hero Bikes</p>
+
+    </div>
+
+
+    <nav>
+
+        <a href="./index.html">
+            Home
+        </a>
+
+        <a href="./bikes.html">
+            New Bikes
+        </a>
+
+        <a href="./usedbikes.html">
+            Used Bikes
+        </a>
+
+        <a href="./parts.html"
+           class="active">
+            Spare Parts
+        </a>
+
+        <a href="./services.html">
+            Services
+        </a>
+
+        <a href="./emi.html">
+            EMI Calculator
+        </a>
+
+        <a href="./contact.html">
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- PAGE HEADER -->
+
+<section class="page-header">
+
+    <h1>
+        Spare Parts & Accessories
+    </h1>
+
+    <p>
+        Genuine bike parts and useful accessories
+        for your motorcycle.
+    </p>
+
+</section>
+
+
+
+<!-- PARTS SECTION -->
+
+<section class="parts-section">
+
+
+    <!-- FILTERS -->
+
+    <div class="parts-filters">
+
+        <input
+            type="text"
+            id="partsSearch"
+            placeholder="Search parts or accessories..."
+        >
+
+
+        <select id="partsCategory">
+
+            <option value="all">
+                All Categories
+            </option>
+
+            <option value="parts">
+                Spare Parts
+            </option>
+
+            <option value="accessories">
+                Accessories
+            </option>
+
+        </select>
+
+
+        <select id="partsPrice">
+
+            <option value="all">
+                All Prices
+            </option>
+
+            <option value="under500">
+                Under ₹500
+            </option>
+
+            <option value="500to1000">
+                ₹500 - ₹1,000
+            </option>
+
+            <option value="1000to3000">
+                ₹1,000 - ₹3,000
+            </option>
+
+            <option value="above3000">
+                Above ₹3,000
+            </option>
+
+        </select>
+
+    </div>
+
+
+
+    <!-- PRODUCTS -->
+
+   <div class="parts-grid" id="partsGrid">
+
+    <p id="partsLoading" class="loading-message">
+        Loading spare parts...
+    </p>
+
+</div>
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="part-card"
+             data-name="Bike Engine Oil"
+             data-category="parts"
+             data-price="450">
+
+            <div class="part-image">
+
+                <img
+                    src="images/engine-oil.jpg"
+                    alt="Bike Engine Oil"
+                >
+
+            </div>
+
+
+            <div class="part-info">
+
+                <span class="part-category">
+                    Spare Part
+                </span>
+
+                <h3>
+                    Bike Engine Oil
+                </h3>
+
+                <h4>
+                    ₹450
+                </h4>
+
+                <p>
+                    Quality engine oil for smooth
+                    bike performance.
+                </p>
+
+
+                <a
+                    href="#"
+                    class="part-button"
+                    onclick="enquirePart('Bike Engine Oil', '₹450'); return false;"
+                >
+                    💬 Enquire on WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="part-card"
+             data-name="Brake Shoe"
+             data-category="parts"
+             data-price="350">
+
+            <div class="part-image">
+
+                <img
+                    src="images/brake-shoe.jpg"
+                    alt="Bike Brake Shoe"
+                >
+
+            </div>
+
+
+            <div class="part-info">
+
+                <span class="part-category">
+                    Spare Part
+                </span>
+
+                <h3>
+                    Brake Shoe
+                </h3>
+
+                <h4>
+                    ₹350
+                </h4>
+
+                <p>
+                    Reliable brake shoe for safe
+                    and smooth braking.
+                </p>
+
+
+                <a
+                    href="#"
+                    class="part-button"
+                    onclick="enquirePart('Brake Shoe', '₹350'); return false;"
+                >
+                    💬 Enquire on WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="part-card"
+             data-name="Bike Air Filter"
+             data-category="parts"
+             data-price="300">
+
+            <div class="part-image">
+
+                <img
+                    src="images/air-filter.jpg"
+                    alt="Bike Air Filter"
+                >
+
+            </div>
+
+
+            <div class="part-info">
+
+                <span class="part-category">
+                    Spare Part
+                </span>
+
+                <h3>
+                    Bike Air Filter
+                </h3>
+
+                <h4>
+                    ₹300
+                </h4>
+
+                <p>
+                    Quality air filter for better
+                    engine performance.
+                </p>
+
+
+                <a
+                    href="#"
+                    class="part-button"
+                    onclick="enquirePart('Bike Air Filter', '₹300'); return false;"
+                >
+                    💬 Enquire on WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="part-card"
+             data-name="Bike Helmet"
+             data-category="accessories"
+             data-price="1200">
+
+            <div class="part-image">
+
+                <img
+                    src="images/helmet.jpg"
+                    alt="Bike Helmet"
+                >
+
+            </div>
+
+
+            <div class="part-info">
+
+                <span class="part-category">
+                    Accessory
+                </span>
+
+                <h3>
+                    Bike Helmet
+                </h3>
+
+                <h4>
+                    ₹1,200
+                </h4>
+
+                <p>
+                    Comfortable helmet for everyday
+                    riding and safety.
+                </p>
+
+
+                <a
+                    href="#"
+                    class="part-button"
+                    onclick="enquirePart('Bike Helmet', '₹1,200'); return false;"
+                >
+                    💬 Enquire on WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 5 -->
+
+        <div class="part-card"
+             data-name="Bike Seat Cover"
+             data-category="accessories"
+             data-price="700">
+
+            <div class="part-image">
+
+                <img
+                    src="images/seat-cover.jpg"
+                    alt="Bike Seat Cover"
+                >
+
+            </div>
+
+
+            <div class="part-info">
+
+                <span class="part-category">
+                    Accessory
+                </span>
+
+                <h3>
+                    Bike Seat Cover
+                </h3>
+
+                <h4>
+                    ₹700
+                </h4>
+
+                <p>
+                    Stylish and comfortable seat cover
+                    for your bike.
+                </p>
+
+
+                <a
+                    href="#"
+                    class="part-button"
+                    onclick="enquirePart('Bike Seat Cover', '₹700'); return false;"
+                >
+                    💬 Enquire on WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 6 -->
+
+        <div class="part-card"
+             data-name="Bike Mobile Holder"
+             data-category="accessories"
+             data-price="600">
+
+            <div class="part-image">
+
+                <img
+                    src="images/mobile-holder.jpg"
+                    alt="Bike Mobile Holder"
+                >
+
+            </div>
+
+
+            <div class="part-info">
+
+                <span class="part-category">
+                    Accessory
+                </span>
+
+                <h3>
+                    Bike Mobile Holder
+                </h3>
+
+                <h4>
+                    ₹600
+                </h4>
+
+                <p>
+                    Secure mobile holder for convenient
+                    navigation while riding.
+                </p>
+
+
+                <a
+                    href="#"
+                    class="part-button"
+                    onclick="enquirePart('Bike Mobile Holder', '₹600'); return false;"
+                >
+                    💬 Enquire on WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- NO RESULTS -->
+
+    <div
+        id="noPartsResults"
+        class="no-results"
+        style="display:none;">
+
+        <h3>
+            No products found
+        </h3>
+
+        <p>
+            Try another search or category.
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- CTA -->
+
+<section class="contact-cta">
+
+    <h2>
+        Need a Bike Part?
+    </h2>
+
+    <p>
+        Contact Jogniya Motors to check
+        availability and price.
+    </p>
+
+    <a
+        href="./contact.html"
+        class="cta-button">
+
+        Contact Us
+
+    </a>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>
+        Jogniya Motors
+    </h3>
+
+    <p>
+        Your Trusted Hero Bike Dealer
+    </p>
+
+    <p>
+        © 2026 Jogniya Motors.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+<!-- WHATSAPP -->
+
+<a
+    href="#"
+    class="whatsapp-float"
+    id="floatingWhatsApp">
+
+    💬
+
+</a>
+
+
+
+<script src="./frontend.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Jogniya Motors</title>
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+
+<body class="dashboard-page">
+
+    <div class="dashboard-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+                <h2>JOGNIYA <span>MOTORS</span></h2>
+                <p>ADMIN PANEL</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#dashboard" class="nav-link active">Dashboard</a>
+                <a href="#bikes" class="nav-link">Manage Bikes</a>
+                <a href="#parts" class="nav-link">Spare Parts</a>
+                <a href="#enquiries" class="nav-link">Customer Enquiries</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="./index.html" target="_blank">View Website</a>
+                <button id="logoutButton" type="button">Logout</button>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="dashboard-main">
+
+            <!-- TOP HEADER -->
+            <header class="dashboard-header">
+
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Welcome to Jogniya Motors Administration</p>
+                </div>
+
+                <div class="admin-profile">
+                    <span class="admin-avatar">A</span>
+                    <span>Administrator</span>
+                </div>
+
+            </header>
+
+
+            <!-- DASHBOARD SECTION -->
+            <section id="dashboard" class="dashboard-section">
+
+                <div class="section-heading">
+                    <h2>Overview</h2>
+                    <p>Here's what's happening with your showroom.</p>
+                </div>
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <div class="stat-icon">🏍️</div>
+                        <h3>Total Bikes</h3>
+                        <p id="totalBikes">--</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">🚲</div>
+                        <h3>Used Bikes</h3>
+                        <p id="usedBikes">--</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">🔧</div>
+                        <h3>Spare Parts</h3>
+                        <p id="totalParts">--</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">📩</div>
+                        <h3>Enquiries</h3>
+                        <p id="totalEnquiries">--</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- BIKES MANAGEMENT SECTION -->
+            <section id="bikes" class="dashboard-section">
+
+                <div class="section-heading">
+                    <h2>Manage Bikes</h2>
+                    <p>Add, edit, delete and manage showroom inventory.</p>
+                </div>
+
+                <!-- BIKE ACTIONS -->
+                <div class="bike-toolbar">
+
+                    <input
+                        type="text"
+                        id="bikeSearch"
+                        placeholder="Search bikes by name or brand..."
+                    >
+
+                    <select id="bikeCategoryFilter">
+                        <option value="">All Bikes</option>
+                        <option value="new">New Bikes</option>
+                        <option value="used">Used Bikes</option>
+                    </select>
+
+                    <button id="addBikeButton" type="button">
+                        + Add New Bike
+                    </button>
+
+                </div>
+
+                <!-- BIKE TABLE -->
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Bike Image</th>
+                                <th>Bike Name</th>
+                                <th>Brand</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="bikesTableBody">
+                            <tr>
+                                <td colspan="9">Loading bikes...</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- SPARE PARTS MANAGEMENT -->
+            <section id="parts" class="dashboard-section">
+
+                <div class="section-heading">
+                    <h2>Manage Spare Parts</h2>
+                    <p>Add, edit, delete and manage spare parts inventory.</p>
+                </div>
+
+                <div class="parts-toolbar">
+
+                    <input
+                        type="text"
+                        id="partSearch"
+                        placeholder="Search spare parts..."
+                    >
+
+                    <button type="button" id="addPartButton">
+                        + Add Spare Part
+                    </button>
+
+                </div>
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Part Name</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="partsTableBody">
+                            <tr>
+                                <td colspan="6">Loading spare parts...</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- ADD / EDIT SPARE PART MODAL -->
+            <div id="partModal" class="part-modal">
+
+                <div class="part-modal-content">
+
+                    <div class="modal-header">
+
+                        <h2 id="partModalTitle">Add Spare Part</h2>
+
+                        <button type="button" id="closePartModal">
+                            &times;
+                        </button>
+
+                    </div>
+
+                    <form id="partForm">
+
+                        <input type="hidden" id="partId">
+
+                        <div class="part-form-grid">
+
+                            <div class="form-group">
+
+                                <label for="partName">Part Name *</label>
+
+                                <input
+                                    type="text"
+                                    id="partName"
+                                    required
+                                    placeholder="Example: Hero Brake Shoe"
+                                >
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label for="partCategory">Category *</label>
+
+                                <input
+                                    type="text"
+                                    id="partCategory"
+                                    required
+                                    placeholder="Example: Brake Parts"
+                                >
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label for="partPrice">Price (₹) *</label>
+
+                                <input
+                                    type="number"
+                                    id="partPrice"
+                                    min="0.01"
+                                    step="0.01"
+                                    required
+                                >
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label for="partStock">Stock Quantity *</label>
+
+                                <input
+                                    type="number"
+                                    id="partStock"
+                                    min="0"
+                                    value="1"
+                                    required
+                                >
+
+                            </div>
+
+                            <div class="form-group full-width">
+
+    <label for="partImageFile">Upload Spare Part Image</label>
+
+    <input
+        type="file"
+        id="partImageFile"
+        accept="image/png,image/jpeg,image/webp"
+    >
+
+    <small>
+        Allowed formats: JPG, PNG, WEBP.
+        Maximum size: 5 MB.
+    </small>
+
+    <div class="image-preview-container">
+
+        <img
+            id="partImagePreview"
+            src=""
+            alt="Spare Part Preview"
+            style="display:none; max-width:150px; margin-top:10px;"
+        >
+
+    </div>
+
+    <input
+        type="text"
+        id="partImage"
+        placeholder="Uploaded image path will appear here"
+        readonly
+    >
+
+    <p id="partImageUploadMessage"></p>
+
+</div>
+
+                            <div class="form-group full-width">
+
+                                <label for="partDescription">Description</label>
+
+                                <textarea
+                                    id="partDescription"
+                                    rows="4"
+                                    placeholder="Enter spare part details..."
+                                ></textarea>
+
+                            </div>
+
+                        </div>
+
+                        <p id="partFormMessage"></p>
+
+                        <div class="modal-actions">
+
+                            <button type="button" id="cancelPartButton">
+                                Cancel
+                            </button>
+
+                            <button type="submit" id="savePartButton">
+                                Save Spare Part
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <!-- CUSTOMER ENQUIRY MANAGEMENT -->
+            <section id="enquiries" class="dashboard-section">
+
+                <div class="section-heading">
+                    <h2>Customer Enquiries</h2>
+                    <p>Manage and track customer enquiries.</p>
+                </div>
+
+                <!-- ENQUIRY TOOLBAR -->
+                <div class="enquiry-toolbar">
+
+                    <input
+                        type="text"
+                        id="enquirySearch"
+                        placeholder="Search by customer name or phone..."
+                    >
+
+                    <select id="enquiryStatusFilter">
+
+                        <option value="">All Enquiries</option>
+                        <option value="new">New</option>
+                        <option value="contacted">Contacted</option>
+                        <option value="completed">Completed</option>
+
+                    </select>
+
+                    <button type="button" id="refreshEnquiriesButton">
+                        Refresh Enquiries
+                    </button>
+
+                </div>
+
+
+                <!-- ENQUIRY STATISTICS -->
+                <div class="enquiry-summary">
+
+                    <div class="enquiry-summary-card">
+                        <h3 id="newEnquiryCount">0</h3>
+                        <p>New Enquiries</p>
+                    </div>
+
+                    <div class="enquiry-summary-card">
+                        <h3 id="contactedEnquiryCount">0</h3>
+                        <p>Contacted</p>
+                    </div>
+
+                    <div class="enquiry-summary-card">
+                        <h3 id="completedEnquiryCount">0</h3>
+                        <p>Completed</p>
+                    </div>
+
+                </div>
+
+
+                <!-- ENQUIRY TABLE -->
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Customer Name</th>
+                                <th>Phone</th>
+                                <th>Enquiry Type</th>
+                                <th>Message</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="enquiriesTableBody">
+
+                            <tr>
+                                <td colspan="8">
+                                    Loading enquiries...
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- ENQUIRY DETAILS MODAL -->
+            <div id="enquiryDetailsModal" class="enquiry-modal">
+
+                <div class="enquiry-modal-content">
+
+                    <div class="enquiry-modal-header">
+
+                        <h2>Customer Enquiry Details</h2>
+
+                        <button
+                            type="button"
+                            id="closeEnquiryModal"
+                        >
+                            &times;
+                        </button>
+
+                    </div>
+
+
+                    <div class="enquiry-details-body">
+
+                        <div class="enquiry-detail-item">
+                            <span>Enquiry ID</span>
+                            <strong id="detailEnquiryId">-</strong>
+                        </div>
+
+                        <div class="enquiry-detail-item">
+                            <span>Customer Name</span>
+                            <strong id="detailCustomerName">-</strong>
+                        </div>
+
+                        <div class="enquiry-detail-item">
+                            <span>Phone Number</span>
+                            <strong id="detailCustomerPhone">-</strong>
+                        </div>
+
+                        <div class="enquiry-detail-item">
+                            <span>Enquiry Type</span>
+                            <strong id="detailEnquiryType">-</strong>
+                        </div>
+
+                        <div class="enquiry-detail-item">
+                            <span>Enquiry Date</span>
+                            <strong id="detailEnquiryDate">-</strong>
+                        </div>
+
+                        <div class="enquiry-detail-item">
+                            <span>Status</span>
+                            <strong id="detailEnquiryStatus">-</strong>
+                        </div>
+
+                        <div class="enquiry-detail-item full-width">
+                            <span>Customer Message</span>
+                            <p id="detailEnquiryMessage">-</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="enquiry-modal-actions">
+
+                        <a
+                            href="#"
+                            id="callCustomerButton"
+                            class="call-customer-button"
+                        >
+                            Call Customer
+                        </a>
+
+                        <button
+                            type="button"
+                            id="closeEnquiryDetailsButton"
+                        >
+                            Close
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADD / EDIT BIKE MODAL -->
+            <div id="bikeModal" class="bike-modal">
+
+                <div class="bike-modal-content">
+
+                    <div class="modal-header">
+
+                        <h2 id="bikeModalTitle">Add New Bike</h2>
+
+                        <button
+                            type="button"
+                            id="closeBikeModal"
+                        >
+                            &times;
+                        </button>
+
+                    </div>
+
+
+                    <form id="bikeForm">
+
+                        <input type="hidden" id="bikeId">
+
+
+                        <!-- BIKE BASIC DETAILS -->
+                        <div class="bike-form-grid">
+
+                            <div class="form-group">
+
+                                <label for="bikeName">Bike Name *</label>
+
+                                <input
+                                    type="text"
+                                    id="bikeName"
+                                    required
+                                    placeholder="e.g. Splendor Plus"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="bikeBrand">Brand *</label>
+
+                                <input
+                                    type="text"
+                                    id="bikeBrand"
+                                    required
+                                    value="Hero"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="bikeCategory">Category *</label>
+
+                                <select id="bikeCategory" required>
+                                    <option value="new">New Bike</option>
+                                    <option value="used">Used Bike</option>
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="bikePrice">Price (₹) *</label>
+
+                                <input
+                                    type="number"
+                                    id="bikePrice"
+                                    min="1"
+                                    step="0.01"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="bikeYear">Model Year</label>
+
+                                <input
+                                    type="number"
+                                    id="bikeYear"
+                                    min="1900"
+                                    max="2100"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="bikeKilometers">Kilometres Driven</label>
+
+                                <input
+                                    type="number"
+                                    id="bikeKilometers"
+                                    min="0"
+                                    value="0"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="bikeStock">Stock Quantity</label>
+
+                                <input
+                                    type="number"
+                                    id="bikeStock"
+                                    min="0"
+                                    value="1"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="bikeStatus">Availability</label>
+
+                                <select id="bikeStatus">
+                                    <option value="available">Available</option>
+                                    <option value="sold">Sold</option>
+                                    <option value="unavailable">Unavailable</option>
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- BIKE IMAGE UPLOAD -->
+                        <div class="form-group full-width">
+
+                            <label for="bikeImageFile">Upload Bike Image</label>
+
+                            <input
+    type="file"
+    id="bikeImageFile"
+    accept="image/png,image/jpeg,image/webp"
+    formnovalidate
+>
+
+                            <small>
+                                Allowed formats: JPG, PNG, WEBP.
+                                Maximum size: 5 MB.
+                            </small>
+
+                            <div class="image-preview-container">
+
+                                <img
+                                    id="bikeImagePreview"
+                                    src=""
+                                    alt="Bike Preview"
+                                    style="display:none;"
+                                >
+
+                            </div>
+
+                            <input
+                                type="text"
+                                id="bikeImage"
+                                placeholder="Uploaded image path will appear here"
+                                readonly
+                            >
+
+                            <p id="bikeImageUploadMessage"></p>
+
+                        </div>
+
+
+                        <!-- BIKE DESCRIPTION -->
+                        <div class="form-group full-width">
+
+                            <label for="bikeDescription">Bike Description</label>
+
+                            <textarea
+                                id="bikeDescription"
+                                rows="4"
+                                placeholder="Enter bike description..."
+                            ></textarea>
+
+                        </div>
+
+
+                        <!-- BIKE FORM ACTIONS -->
+                        <div class="modal-actions">
+
+                            <p id="bikeFormMessage"></p>
+
+                            <button
+                                type="button"
+                                id="cancelBikeButton"
+                            >
+                                Cancel
+                            </button>
+
+                            <button
+                                type="submit"
+                                id="saveBikeButton"
+                            >
+                                Save Bike
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="./js/admin.js"></script>
+    <script src="./js/image-upload.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>New Bikes | Jogniya Motors</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">
+        <span>JOGNIYA</span>
+        <small>MOTORS</small>
+    </div>
+
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./bikes.html">New Bikes</a>
+        <a href="./usedbikes.html">Used Bikes</a>
+        <a href="./parts.html">Parts</a>
+        <a href="./services.html">Services</a>
+        <a href="./emi.html">EMI Calculator</a>
+        <a href="./contact.html">Contact</a>
+    </nav>
+
+    <a href="#" class="nav-whatsapp">WhatsApp</a>
+</header>
+
+<section class="page-header">
+    <p>JOGNIYA MOTORS</p>
+    <h1>New Hero Bikes</h1>
+    <span>Explore our latest Hero motorcycle collection.</span>
+</section>
+
+<section class="bike-section">
+
+    <div class="bike-top">
+        <div>
+            <p class="section-label">HERO MOTORCYCLES</p>
+            <h2>Find Your Perfect Bike</h2>
+        </div>
+
+        <p id="bikeCount">Loading bikes...</p>
+    </div>
+
+    <div class="filters">
+
+        <div class="filter-group">
+            <label for="search">Search Bike</label>
+            <input type="text" id="search"
+                   placeholder="Search bike name...">
+        </div>
+
+        <div class="filter-group">
+            <label for="brand">Brand</label>
+            <select id="brand">
+                <option value="all">All Brands</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="price">Price Range</label>
+            <select id="price">
+                <option value="all">All Prices</option>
+                <option value="0-80000">Under ₹80,000</option>
+                <option value="80000-100000">₹80,000 - ₹1 Lakh</option>
+                <option value="100000-150000">₹1 Lakh - ₹1.5 Lakh</option>
+                <option value="150000-99999999">Above ₹1.5 Lakh</option>
+            </select>
+        </div>
+
+        <button class="clear-filter" onclick="clearFilters()">
+            Clear Filters
+        </button>
+
+    </div>
+
+    <div class="bike-grid" id="bikeContainer">
+        <p class="inventory-message">Loading available bikes...</p>
+    </div>
+
+    <div id="noResults" class="no-results">
+        <h3>No bikes found</h3>
+        <p>Try changing your search or price filter.</p>
+    </div>
+
+    <div id="bikeError" class="inventory-error" style="display:none;">
+        Unable to load bikes. Please try again later.
+    </div>
+
+</section>
+
+<section class="emi-banner">
+    <div>
+        <p>NEED FINANCE?</p>
+        <h2>Calculate Your Monthly EMI</h2>
+    </div>
+
+    <a href="./emi.html" class="btn primary">
+        Calculate EMI
+    </a>
+</section>
+
+<footer>
+    <div class="footer-logo">JOGNIYA MOTORS</div>
+
+    <p>
+        Your trusted destination for Hero bikes,
+        used bikes, spare parts and services.
+    </p>
+
+    <div class="footer-links">
+        <a href="./index.html">Home</a>
+        <a href="./usedbikes.html">Used Bikes</a>
+        <a href="./parts.html">Parts</a>
+        <a href="./services.html">Services</a>
+        <a href="./contact.html">Contact</a>
+    </div>
+
+    <p class="copyright">
+        © 2026 Jogniya Motors. All Rights Reserved.
+    </p>
+</footer>
+
+<a href="#" class="whatsapp-float">💬</a>
+
+<script src="./frontend.js"></script>
+
+</body>
+</html>
