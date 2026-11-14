@@ -125,7 +125,7 @@ node server.js
 The backend runs at:
 
 ```text
-http://localhost:5000
+https://jogniya-motor.onrender.com
 ```
 
 ### 7. Open the frontend

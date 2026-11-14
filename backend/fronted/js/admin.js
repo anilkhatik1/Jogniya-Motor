@@ -2,7 +2,7 @@
 // JOGNIYA MOTORS - COMPLETE ADMIN SYSTEM
 // =============================================
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://jogniya-motor.onrender.com";
 const TOKEN_KEY = "jogniyaAdminToken";
 
 // =============================================

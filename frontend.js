@@ -4,8 +4,8 @@
 
 console.log("Jogniya Motors website loaded successfully.");
 
-const API_URL = "http://localhost:5000";
-const IMAGE_SERVER_URL = "http://localhost:5000";
+const API_URL = "https://jogniya-motor.onrender.com";
+const IMAGE_SERVER_URL = "https://jogniya-motor.onrender.com";
 const showroomWhatsApp = "918949921172";
 
 
@@ -834,7 +834,7 @@ if (enquiryForm) {
         try {
 
             const response = await fetch(
-                "http://localhost:5000/api/enquiries",
+                "https://jogniya-motor.onrender.com/api/enquiries",
                 {
                     method: "POST",
 
@@ -909,7 +909,7 @@ if (partsSearch || partsCategory || partsPrice) {
 // MYSQL SPARE PARTS INTEGRATION
 // =============================================
 
-const PARTS_API_URL = "http://localhost:5000/api/parts";
+const PARTS_API_URL = "https://jogniya-motor.onrender.com/api/parts";
 
 let allSpareParts = [];
 
@@ -1028,7 +1028,7 @@ function displaySpareParts(parts) {
         const imageURL = image
             ? (image.startsWith("http")
                 ? image
-                : "http://localhost:5000" +
+                : "https://jogniya-motor.onrender.com" +
                   (image.startsWith("/") ? image : "/" + image))
             : "";
 

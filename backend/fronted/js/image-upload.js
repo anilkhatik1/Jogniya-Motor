@@ -2,8 +2,8 @@
 // JOGNIYA MOTORS - IMAGE UPLOAD SYSTEM
 // =============================================
 
-const IMAGE_UPLOAD_API = "http://localhost:5000/api/upload/image";
-const IMAGE_SERVER_URL = "http://localhost:5000";
+const IMAGE_UPLOAD_API = "https://jogniya-motor.onrender.com/api/upload/image";
+const IMAGE_SERVER_URL = "https://jogniya-motor.onrender.com";
 const IMAGE_TOKEN_KEY = "jogniyaAdminToken";
 
 // =============================================
